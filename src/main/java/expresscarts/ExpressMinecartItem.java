@@ -4,6 +4,7 @@ import org.jetbrains.annotations.Nullable;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
 import eu.pb4.polymer.core.api.item.PolymerItemUtils;
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
@@ -37,7 +38,11 @@ public class ExpressMinecartItem extends MinecartItem implements PolymerItem {
 
     @Override
     public @Nullable Identifier getPolymerItemModel(ItemStack stack, PacketContext context) {
-        return this.getPolymerItem(stack, context).getDefaultStack().get(DataComponentTypes.ITEM_MODEL);
+        if (PolymerResourcePackUtils.hasMainPack(context)) {
+            return stack.get(DataComponentTypes.ITEM_MODEL);
+        } else {
+            return this.getPolymerItem(stack, context).getDefaultStack().get(DataComponentTypes.ITEM_MODEL);
+        }
     }
 
 }

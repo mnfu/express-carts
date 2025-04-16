@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.pb4.polymer.core.api.entity.PolymerEntityUtils;
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 
 public class ExpressCarts implements ModInitializer {
 	public static final String MOD_ID = "expresscarts";
@@ -29,6 +30,7 @@ public class ExpressCarts implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		PolymerEntityUtils.registerType(EXPRESS_MINECART_ENTITY);
+		PolymerResourcePackUtils.addModAssets(ExpressCarts.MOD_ID);
 
 		ModItems.initialize();
 
