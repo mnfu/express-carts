@@ -1,8 +1,11 @@
 package expresscarts;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.block.DispenserBlock;
+import net.minecraft.block.dispenser.MinecartDispenserBehavior;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -33,6 +36,8 @@ public class ExpressCarts implements ModInitializer {
 		PolymerResourcePackUtils.addModAssets(ExpressCarts.MOD_ID);
 
 		ModItems.initialize();
+
+		DispenserBlock.registerBehavior(ModItems.EXPRESS_MINECART, new MinecartDispenserBehavior(EXPRESS_MINECART_ENTITY));
 
 		LOGGER.info("Express Carts ready!");
 	}
