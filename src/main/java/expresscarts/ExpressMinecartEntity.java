@@ -1,6 +1,8 @@
 package expresscarts;
 
 import java.util.List;
+import java.util.Set;
+import java.util.function.Consumer;
 
 import eu.pb4.polymer.core.api.entity.PolymerEntity;
 import expresscarts.mixin.AbstractMinecartEntityAccessor;
@@ -9,9 +11,14 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.data.DataTracker.SerializedEntry;
+import net.minecraft.entity.vehicle.ExperimentalMinecartController;
 import net.minecraft.entity.vehicle.MinecartEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.PlayPackets;
+import net.minecraft.network.packet.s2c.play.EntityPositionSyncS2CPacket;
+import net.minecraft.server.network.PlayerAssociatedNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 import xyz.nucleoid.packettweaker.PacketContext;

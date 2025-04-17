@@ -1,12 +1,19 @@
 {
-	"required": true,
-	"package": "expresscarts.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"AbstractMinecartEntityAccessor",
-		"DefaultMinecartControllerMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "expresscarts.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractMinecartEntityAccessor",
+    "AbstractMinecartEntityMixin",
+    "EntityTrackerEntryMixin",
+    "ExperimentalMinecartControllerMixin",
+    "MinecartItemMixin",
+    "ShapeContextMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixinextras": {
+    "minVersion": "0.5.0-rc.1"
 	}
 }
