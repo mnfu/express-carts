@@ -5,7 +5,6 @@ import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.MinecartDispenserBehavior;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;

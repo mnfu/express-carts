@@ -18,6 +18,7 @@ public abstract class ExperimentalMinecartControllerMixin extends MinecartContro
     }
 
     @Unique
+    // TODO: make max speed configurable
     // max speed in blocks per second
     private double expresscarts$MAX_SPEED = 16;
 
