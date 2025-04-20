@@ -64,14 +64,9 @@ public class ExpressMinecartEntity extends MinecartEntity implements PolymerEnti
 
         if (this.getFirstPassenger() instanceof ServerPlayerEntity player && player.getPlayerInput().backward()) {
             // stop completely if going slowly. otherwise, slow down (but not as quickly as an unpowered powered rail)
-            return vel.length() < 0.03 ? Vec3d.ZERO : vel.multiply(0.8);
+            return vel.length() < 0.03 ? Vec3d.ZERO : vel.multiply(1 - ExpressCarts.BRAKE_SLOWDOWN);
         }
 
         return vel;
-    }
-
-    @Override
-    public boolean canSprintAsVehicle() {
-        return super.canSprintAsVehicle();
     }
 }

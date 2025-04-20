@@ -18,7 +18,6 @@ import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 
 public class ExpressCarts implements ModInitializer {
 	public static final String MOD_ID = "expresscarts";
-
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final EntityType<ExpressMinecartEntity> EXPRESS_MINECART_ENTITY = Registry.register(
@@ -28,6 +27,17 @@ public class ExpressCarts implements ModInitializer {
 					.dimensions(0.98F, 0.7F).passengerAttachments(0.1875F).maxTrackingRange(8)
 					.build(RegistryKey.of(Registries.ENTITY_TYPE.getKey(),
 							Identifier.of(ExpressCarts.MOD_ID, "minecart"))));
+
+	// TODO: make max speed configurable
+	public static final double MAX_MINECART_SPEED = 16;
+	/**
+	 * Multiplier to the max minecart speed when in water.
+	 */
+	public static final double WATER_SPEED_MULTIPLIER = 0.5;
+	/**
+	 * Slowdown rate, in blocks per tick squared, applied when a player applies the brakes.
+	 */
+	public static final double BRAKE_SLOWDOWN = 0.2;
 
 	@Override
 	public void onInitialize() {
