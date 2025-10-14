@@ -55,3 +55,8 @@ while the server is stopped. The following configuration options are available:
 - `brakingEnabled` (default `true`): Whether players can hold the backwards movement key to brake.
 - `brakeSlowdown` (default 0.8): Amount by which an Express Minecart's velocity is scaled each tick their passenger holds the brakes.
 - `blockSpeedMultipliers`: A map from block ids (e.g. `minecraft:dirt`) to multiplier values for the maximum cart speed if the rail is placed on that block.
+
+## Version Support
+
+We aim to support the latest version of Minecraft as the primary target for feature additions.
+The mod version will not be incremented if the only change is supporting a new version of Minecraft, but a new release will be published.
