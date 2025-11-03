@@ -1,2 +1,1 @@
-- Improved the display of the `/expresscarts` command.
-- Added configurable max speed multipliers based on the block underneath the rails. Set these using `/config expresscarts blockSpeedMultipliers put <block> <multiplier>`.
+- Added a config option `fastUnpoweredSlowdown` (disabled by default). Enabling it will make Express Minecarts stop faster on unpowered powered rails, which is helpful when they're travelling at high speeds.

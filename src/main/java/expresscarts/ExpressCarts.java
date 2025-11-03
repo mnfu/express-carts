@@ -65,6 +65,7 @@ public class ExpressCarts implements ModInitializer {
         LOGGER.info("Express Carts ready!");
     }
 
+    // TODO: improve this
     Component buildConfigurationMessage(ModMetadata metadata) {
         // Ideally we'd have hover text on each config entry with the comment to explain what it does, but there's no public api for that in BetterConfig
         return Component.empty()
@@ -87,6 +88,8 @@ public class ExpressCarts implements ModInitializer {
                 .append(Component.translatable("expresscarts.command.expresscarts.config.brakingEnabled", String.valueOf(ExpressCartsConfig.brakingEnabled)))
                 .append("\n")
                 .append(Component.translatable("expresscarts.command.expresscarts.config.brakeSlowdown", ExpressCartsConfig.brakeSlowdown))
+                .append("\n")
+                .append(Component.translatable("expresscarts.command.expresscarts.config.fastUnpoweredSlowdown", String.valueOf(ExpressCartsConfig.fastUnpoweredSlowdown)))
                 .append("\n")
                 .append(buildBlockOverridesMessage());
     }

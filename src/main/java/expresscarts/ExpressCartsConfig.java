@@ -37,4 +37,10 @@ public class ExpressCartsConfig {
     public static Component blockSpeedMultipliersComment() {
         return Component.translatable("expresscarts.config.comment.blockSpeedMultipliers");
     }
+
+    @Config(comment = "fastUnpoweredSlowdownComment")
+    public static boolean fastUnpoweredSlowdown = false;
+    public static Component fastUnpoweredSlowdownComment() {
+        return Component.translatable("expresscarts.config.comment.fastUnpoweredSlowdown");
+    }
 }
