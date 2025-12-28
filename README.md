@@ -1,5 +1,15 @@
 # Express Carts
+## ⚠️ Fork Notes ⚠️
+This repository is a personally used fork of [Express Carts](https://github.com/Seercat3160/express-carts) to include pending fixes and updates.
 
+Please note that releases from this fork:
+
+- Are not official
+
+- May not be fully match official releases (in versioning and or functionality)
+
+For official releases, please refer to the original repository.
+---
 <a href="https://modrinth.com/mod/express-carts"><img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg"></a>
 <a href="https://github.com/Seercat3160/express-carts"><img alt="github" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg"></a>
 <a href="https://modrinth.com/mod/fabric-api"><img alt="fabric-api" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/fabric-api_vector.svg"></a>
